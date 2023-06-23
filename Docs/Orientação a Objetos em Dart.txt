@@ -1,0 +1,8 @@
+Orientação a Objetos em DartQuando usamos interface no Dart usamos qual palavra reservada?
+	implements
+Quando herdamos de uma classe, para que serve a palavra super?
+	Para se referenciar a classe pai
+Quando usamos herança no Dart usamos qual palavra reservada?
+	extends
+Quando colocamos "_" antes do nome de uma propriedade em Dart, queremos que a mesma seja....
+	privada

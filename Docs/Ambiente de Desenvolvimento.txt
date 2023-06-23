@@ -1,0 +1,12 @@
+Qual variável de ambiente precisamos fazer para executar o comando flutter de qualquer local do nosso sistema operacional?
+	PATH
+
+Quais as IDEs mais recomendadas para usarmos em aplicações Flutter?
+	Visual Studio Code e Android Studio
+
+Em quais sistemas operacionais podemos desenvolver para Flutter?
+	Windows, MacOS, Linux, ChormeOS
+	
+Qual comando usamos para verificar se a instalação do Flutter está correta?
+	flutter doctor
+	

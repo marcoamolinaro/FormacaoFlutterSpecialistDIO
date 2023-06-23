@@ -1,0 +1,11 @@
+Para que serve o return?
+	Para que a função retorne um valor
+	
+Para que serve o void?
+	Para informar que a função não retorna dados
+	
+Sobre funções em Dart o que é correto afirmar?
+	Pode ou não retornar um valor
+
+O que é uma função recursiva?
+	Uma função que chama ela mesma

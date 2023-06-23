@@ -1,0 +1,12 @@
+Quais formas uma aplicação DART é compilada?
+	ahead-of-time e just-in-time
+	
+O Dart inicialmente foi criado para ser um...?
+	Transpilador
+	
+O Dart é usado em quais tipos de aplicação?
+	Pacote, Console, REST e WebSocket
+
+Para criar uma aplicação Dart usamos qual comando?
+	dart create nome-da-pasta
+	

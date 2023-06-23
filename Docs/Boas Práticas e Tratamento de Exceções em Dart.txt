@@ -1,0 +1,11 @@
+Para que serve os lints?
+	Fornecer dicar com boas práticas de programação
+
+Para que serve o bloco finally?
+	Executar o código independentemente se ocorreu erro ou não no bloco try catch
+
+O bloco catch serve para?
+	Para executar código caso de algum erro ocorra no bloco try
+
+Para lançar uma exceção usamos qual comando?
+	throw Exception()

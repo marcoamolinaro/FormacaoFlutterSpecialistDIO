@@ -1,0 +1,8 @@
+Como declaramos um if ternário no Dart?
+	condição ? se_verdade : se_falso
+O que significa o operador ">=" ?
+	Maior ou igual
+Quais estrutura de repetição temos no Dart?
+	for, foreach, do while, while
+Em um laço while, o que é correto dizer?
+	Pode ocorrer uma situação que o código nunca será executado

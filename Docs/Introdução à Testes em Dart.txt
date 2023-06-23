@@ -1,0 +1,8 @@
+Para que serve o comando dart run test?
+	Executar todos os testes da aplicação
+O matcher "equals" serve para....
+	Comparar valores de forma identica
+Para que servem os testes?
+	Para garantir que partes do código estão corretos
+Para que serve o "throwA"?
+	Para mockarmos um erro na execução de um método

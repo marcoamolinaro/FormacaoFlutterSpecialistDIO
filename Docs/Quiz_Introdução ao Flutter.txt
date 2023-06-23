@@ -1,0 +1,12 @@
+Para quais plataformas podemos desenvolver em Flutter?
+	Mobile, Web, Embarcado, Windowa, MacOS e Linux
+
+Qual empresa está dando suporte para o projeto Flutter?
+	Google
+
+O que é o Flutter?
+	Flutter é um kit de desenvolvimento de interface de usuário
+	
+Qual a linguagem de programação que usamos para criar nossos projetos em Flutter?
+	Dart
+

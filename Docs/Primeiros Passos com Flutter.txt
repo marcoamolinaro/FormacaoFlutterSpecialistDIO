@@ -1,0 +1,11 @@
+Qual comando usamos para criar uma aplicação em Flutter?
+	flutter create
+	
+Qual o primeiro arquivo a ser executado por padrão em um projeto Flutter?
+	main.dart
+
+Qual a pasta em que adicionamos nossos códigos Dart?
+	lib
+
+Para que serve o arquivo pubspec.yaml?
+	Configurar o projeto Flutter e adicionar pacotes
