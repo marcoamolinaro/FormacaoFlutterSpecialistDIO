@@ -1,0 +1,2 @@
+flutter create -t app --org br.com.scm.dioapp -a kotlin -i swift dioproject1
+flutter create -t app -a kotlin -i swift --org br.com.scm.trilhaapp trilhaapp 
