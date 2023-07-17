@@ -12,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.grey,
         body: SizedBox(
           width: double.infinity,
           child: Column(
@@ -21,10 +21,42 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 100,
               ),
+              const Icon(
+                Icons.person,
+                size: 125,
+                color: Colors.blueAccent,
+              ),
               Container(
-                width: 150,
-                height: 150,
-                color: Colors.amber,
+                width: double.infinity,
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                height: 30,
+                alignment: Alignment.center,
+                child: const Row(children: [
+                  Expanded(flex: 2, child: Text("Informe seu e-mail:")),
+                  Expanded(flex: 3, child: Text("Email")),
+                ]),
+              ),
+              Container(
+                width: double.infinity,
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                height: 30,
+                alignment: Alignment.center,
+                child: const Row(children: [
+                  Expanded(flex: 2, child: Text("Informe seu senha:")),
+                  Expanded(flex: 3, child: Text("Senha")),
+                ]),
+              ),
+              Expanded(child: Container()),
+              Container(
+                width: double.infinity,
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                color: Colors.green,
+                height: 30,
+                alignment: Alignment.center,
+                child: const Text("Login"),
               ),
               Container(
                 width: double.infinity,
@@ -32,7 +64,8 @@ class _LoginPageState extends State<LoginPage> {
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                 color: Colors.green,
                 height: 30,
-                child: const Text("Informe seu E-Mail"),
+                alignment: Alignment.center,
+                child: const Text("Cadastro"),
               )
             ],
           ),
