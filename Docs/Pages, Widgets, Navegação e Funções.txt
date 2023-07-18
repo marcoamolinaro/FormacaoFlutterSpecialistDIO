@@ -1,0 +1,11 @@
+Qual a diferença de Row e Column?
+	Row coloca widgets um do lado do outro, enquanto Column um abaixo do outros
+	
+Para que serve o runApp() no Flutter?
+	Para iniciar uma aplicação em Flutter
+
+Qual a finalidade do widget Expanded?
+	o Expanded ajuda a criar componentes com tamanhos dinâmicos, baseados em porcentagem.
+	
+Qual a finalidade do widget Scaffold?
+	O Scaffold é um widget que nos entrega divaersas facilidades para criação de nossas páginas

@@ -12,7 +12,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.grey,
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         body: SizedBox(
           width: double.infinity,
           child: Column(
@@ -21,10 +21,40 @@ class _LoginPageState extends State<LoginPage> {
               const SizedBox(
                 height: 100,
               ),
-              const Icon(
-                Icons.person,
-                size: 125,
-                color: Colors.blueAccent,
+              Row(
+                children: [
+                  Expanded(child: Container()),
+                  Expanded(
+                    flex: 8,
+                    child: Image.network(
+                      "https://hermes.digitalinnovation.one/assets/diome/logo.png",
+                    ),
+                  ),
+                  Expanded(child: Container()),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                "Já Tem Cadastro?",
+                style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const Text(
+                "Faça seu login e make the change_",
+                style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white),
+              ),
+              const SizedBox(
+                height: 20,
               ),
               Container(
                 width: double.infinity,
@@ -33,8 +63,16 @@ class _LoginPageState extends State<LoginPage> {
                 height: 30,
                 alignment: Alignment.center,
                 child: const Row(children: [
-                  Expanded(flex: 2, child: Text("Informe seu e-mail:")),
-                  Expanded(flex: 3, child: Text("Email")),
+                  Expanded(
+                      flex: 2,
+                      child: Text(
+                        "Informe seu e-mail:",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  Expanded(
+                      flex: 3,
+                      child:
+                          Text("Email", style: TextStyle(color: Colors.white))),
                 ]),
               ),
               Container(
@@ -44,11 +82,16 @@ class _LoginPageState extends State<LoginPage> {
                 height: 30,
                 alignment: Alignment.center,
                 child: const Row(children: [
-                  Expanded(flex: 2, child: Text("Informe seu senha:")),
-                  Expanded(flex: 3, child: Text("Senha")),
+                  Expanded(
+                      flex: 2,
+                      child: Text("Informe seu senha:",
+                          style: TextStyle(color: Colors.white))),
+                  Expanded(
+                      flex: 3,
+                      child:
+                          Text("Senha", style: TextStyle(color: Colors.white))),
                 ]),
               ),
-              Expanded(child: Container()),
               Container(
                 width: double.infinity,
                 margin:
@@ -58,14 +101,32 @@ class _LoginPageState extends State<LoginPage> {
                 alignment: Alignment.center,
                 child: const Text("Login"),
               ),
+              const SizedBox(
+                height: 40,
+              ),
               Container(
                 width: double.infinity,
                 margin:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                color: Colors.green,
                 height: 30,
                 alignment: Alignment.center,
-                child: const Text("Cadastro"),
+                child: const Text(
+                  "Esqueci minha senha",
+                  style: TextStyle(
+                      color: Colors.blue, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Container(
+                width: double.infinity,
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                height: 30,
+                alignment: Alignment.center,
+                child: const Text(
+                  "Criar conta",
+                  style: TextStyle(
+                      color: Colors.green, fontWeight: FontWeight.bold),
+                ),
               )
             ],
           ),
