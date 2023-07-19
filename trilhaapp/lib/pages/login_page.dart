@@ -62,18 +62,20 @@ class _LoginPageState extends State<LoginPage> {
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                 height: 30,
                 alignment: Alignment.center,
-                child: const Row(children: [
-                  Expanded(
-                      flex: 2,
-                      child: Text(
-                        "Informe seu e-mail:",
-                        style: TextStyle(color: Colors.white),
+                child: const TextField(
+                  decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(top: 0),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)),
+                      hintText: "E-Mail",
+                      hintStyle: TextStyle(color: Colors.white),
+                      prefixIcon: Icon(
+                        Icons.mail,
+                        color: Colors.white,
                       )),
-                  Expanded(
-                      flex: 3,
-                      child:
-                          Text("Email", style: TextStyle(color: Colors.white))),
-                ]),
+                ),
               ),
               Container(
                 width: double.infinity,
@@ -81,16 +83,21 @@ class _LoginPageState extends State<LoginPage> {
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                 height: 30,
                 alignment: Alignment.center,
-                child: const Row(children: [
-                  Expanded(
-                      flex: 2,
-                      child: Text("Informe seu senha:",
-                          style: TextStyle(color: Colors.white))),
-                  Expanded(
-                      flex: 3,
-                      child:
-                          Text("Senha", style: TextStyle(color: Colors.white))),
-                ]),
+                child: const TextField(
+                  decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(top: 0),
+                      enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white)),
+                      hintText: "Senha",
+                      hintStyle: TextStyle(color: Colors.white),
+                      prefixIcon: Icon(Icons.lock, color: Colors.white),
+                      suffixIcon: Icon(
+                        Icons.visibility,
+                        color: Colors.white,
+                      )),
+                ),
               ),
               Container(
                 width: double.infinity,
