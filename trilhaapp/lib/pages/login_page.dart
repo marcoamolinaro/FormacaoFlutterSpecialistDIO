@@ -96,10 +96,23 @@ class _LoginPageState extends State<LoginPage> {
                 width: double.infinity,
                 margin:
                     const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-                color: Colors.green,
                 height: 30,
                 alignment: Alignment.center,
-                child: const Text("Login"),
+                child: SizedBox(
+                  width: double.infinity,
+                  child: TextButton(
+                      onPressed: () {},
+                      style: ButtonStyle(
+                          shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(10))),
+                          backgroundColor: MaterialStateProperty.all(
+                              const Color.fromARGB(255, 57, 31, 187))),
+                      child: const Text(
+                        "ENTRAR",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                ),
               ),
               const SizedBox(
                 height: 40,
