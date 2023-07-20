@@ -10,6 +10,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String email = "";
   String senha = "";
+  bool isObscureText = true;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -92,22 +93,33 @@ class _LoginPageState extends State<LoginPage> {
                     height: 30,
                     alignment: Alignment.center,
                     child: TextField(
+                      obscureText: isObscureText,
                       onChanged: (value) {
                         senha = value;
                       },
-                      style: const TextStyle(color: Colors.white),
-                      decoration: const InputDecoration(
-                          contentPadding: EdgeInsets.only(top: 0),
-                          enabledBorder: UnderlineInputBorder(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          contentPadding: const EdgeInsets.only(top: 0),
+                          enabledBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white)),
-                          focusedBorder: UnderlineInputBorder(
+                          focusedBorder: const UnderlineInputBorder(
                               borderSide: BorderSide(color: Colors.white)),
                           hintText: "Senha",
-                          hintStyle: TextStyle(color: Colors.white),
-                          prefixIcon: Icon(Icons.lock, color: Colors.white),
-                          suffixIcon: Icon(
-                            Icons.visibility,
-                            color: Colors.white,
+                          hintStyle: const TextStyle(color: Colors.white),
+                          prefixIcon:
+                              const Icon(Icons.lock, color: Colors.white),
+                          suffixIcon: InkWell(
+                            onTap: () {
+                              setState(() {
+                                isObscureText = !isObscureText;
+                              });
+                            },
+                            child: Icon(
+                              isObscureText
+                                  ? Icons.visibility_off
+                                  : Icons.visibility,
+                              color: Colors.white,
+                            ),
                           )),
                     ),
                   ),
