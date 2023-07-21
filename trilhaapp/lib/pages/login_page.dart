@@ -8,8 +8,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String email = "";
-  String senha = "";
+  var emailController = TextEditingController();
+  var senhaController = TextEditingController();
   bool isObscureText = true;
   @override
   Widget build(BuildContext context) {
@@ -68,8 +68,9 @@ class _LoginPageState extends State<LoginPage> {
                     height: 30,
                     alignment: Alignment.center,
                     child: TextField(
+                      controller: emailController,
                       onChanged: (value) {
-                        email = value;
+                        debugPrint(value);
                       },
                       style: const TextStyle(color: Colors.white),
                       decoration: const InputDecoration(
@@ -94,10 +95,11 @@ class _LoginPageState extends State<LoginPage> {
                     alignment: Alignment.center,
                     child: TextField(
                       obscureText: isObscureText,
+                      controller: senhaController,
                       onChanged: (value) {
-                        senha = value;
+                        debugPrint(value);
                       },
-                      style: TextStyle(color: Colors.white),
+                      style: const TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                           contentPadding: const EdgeInsets.only(top: 0),
                           enabledBorder: const UnderlineInputBorder(
@@ -133,8 +135,8 @@ class _LoginPageState extends State<LoginPage> {
                       width: double.infinity,
                       child: TextButton(
                           onPressed: () {
-                            print(email);
-                            print(senha);
+                            debugPrint(emailController.text);
+                            debugPrint(senhaController.text);
                           },
                           style: ButtonStyle(
                               shape: MaterialStateProperty.all(
