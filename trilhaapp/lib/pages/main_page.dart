@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trilhaapp/pages/dados_cadastrais_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -22,7 +23,16 @@ class _MainPageState extends State<MainPage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DadosCadastraisPage(
+                                    texto: "Meus Dados",
+                                    dados: ["Nome", "Endereço"],
+                                  )));
+                    },
                     child: Container(
                         padding: const EdgeInsets.symmetric(vertical: 5),
                         width: double.infinity,
