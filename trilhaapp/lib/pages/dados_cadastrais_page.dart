@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trilhaapp/shared/widgets/text_label.dart';
 
 class DadosCadastraisPage extends StatefulWidget {
   const DadosCadastraisPage({Key? key}) : super(key: key);
@@ -8,7 +9,9 @@ class DadosCadastraisPage extends StatefulWidget {
 }
 
 class _DadosCadastraisPageState extends State<DadosCadastraisPage> {
-  TextEditingController nomeController = TextEditingController(text: "");
+  var nomeController = TextEditingController(text: "");
+  var dataNascimentoController = TextEditingController(text: "");
+  DateTime? dataNascimento;
 
   @override
   Widget build(BuildContext context) {
@@ -19,16 +22,33 @@ class _DadosCadastraisPageState extends State<DadosCadastraisPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              "Nome",
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
-            ),
+            const TextLabel(texto: "Nome"),
             TextField(
               controller: nomeController,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const TextLabel(texto: "Data de Nascimento"),
+            TextField(
+              controller: dataNascimentoController,
+              readOnly: true,
+              onTap: () async {
+                var data = await showDatePicker(
+                    context: context,
+                    initialDate: DateTime(2000, 1, 1),
+                    firstDate: DateTime(1900, 5, 20),
+                    lastDate: DateTime(2023, 10, 23));
+                if (data != null) {
+                  dataNascimentoController.text = data.toString();
+                  dataNascimento = data;
+                }
+              },
             ),
             TextButton(
                 onPressed: () {
                   print(nomeController.text);
+                  print(dataNascimento);
                 },
                 child: const Text("Salvar"))
           ],
