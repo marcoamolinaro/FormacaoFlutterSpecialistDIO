@@ -1,0 +1,12 @@
+Onde usamos o widget BottonNavigationBar?
+	dart ceate nome_da_pasta
+
+O que é o PageView?
+	É um widget usado para navegarmos entre widgets e páginas
+
+Em um textField para que serve a propriedade obscureText?
+	Para fazer esconder ou aparecer o caracteres digitados, substituindo os por asteristicos.
+
+O que é o widget Drawer?
+	O Drawer serve para criarmos menu lateral na página
+
