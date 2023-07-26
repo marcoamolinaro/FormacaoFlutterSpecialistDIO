@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:trilhaapp/pages/dados_cadastrais_page.dart';
 import 'package:trilhaapp/pages/pagina1.dart';
+import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
 import 'pagina2.dart';
 import 'pagina3.dart';
@@ -22,49 +22,7 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: const Text("Main Page"),
         ),
-        drawer: Drawer(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                InkWell(
-                    onTap: () {
-                      Navigator.pop(context);
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) =>
-                                  const DadosCadastraisPage()));
-                    },
-                    child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 5),
-                        width: double.infinity,
-                        child: const Text("Dados Cadastrais"))),
-                const Divider(),
-                const SizedBox(
-                  height: 10,
-                ),
-                InkWell(
-                    onTap: () {},
-                    child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 5),
-                        width: double.infinity,
-                        child: const Text("Configurações"))),
-                const Divider(),
-                const SizedBox(
-                  height: 10,
-                ),
-                InkWell(
-                    onTap: () {},
-                    child: Container(
-                        padding: const EdgeInsets.symmetric(vertical: 5),
-                        width: double.infinity,
-                        child: const Text("Termos de Uso e Privacidade"))),
-              ],
-            ),
-          ),
-        ),
+        drawer: const CustomDrawer(),
         body: Column(
           children: [
             Expanded(

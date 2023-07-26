@@ -1,1 +1,12 @@
-Interação com o Usuário
+Para que serve o DropDownButton?
+	O DropDownButton é usado para selecionar uma única opção, só que as opções aparecem apenas depois de clicar no widget.
+	
+O que é um DatePicker?
+	O DatePicker é um widget que usamos para obter informação de data.
+	
+Qual a finalidade do Slider?
+	O Slider é usado para selecionar uma informação numérica dentre um range de valores.
+	
+Qual a diferença de RadioList e CheckBox?
+	O RadioList é usado para seleção única, já o CheckBox é para multiplas seleções;
+	
