@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trilhaapp/pages/card_page.dart';
 import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
-import 'pagina2.dart';
+import 'image_assets_page.dart';
 import 'pagina3.dart';
 
 class MainPage extends StatefulWidget {
@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
                 },
                 children: const [
                   CardPage(),
-                  Pagina2Page(),
+                  ImageAssetsPage(),
                   Pagina3Page(),
                 ],
               ),
