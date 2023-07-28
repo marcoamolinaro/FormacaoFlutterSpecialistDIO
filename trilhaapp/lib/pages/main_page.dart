@@ -3,7 +3,7 @@ import 'package:trilhaapp/pages/card_page.dart';
 import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
 import 'image_assets_page.dart';
-import 'pagina3.dart';
+import 'list_view_h_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -36,7 +36,7 @@ class _MainPageState extends State<MainPage> {
                 children: const [
                   CardPage(),
                   ImageAssetsPage(),
-                  Pagina3Page(),
+                  ListViewHPage(),
                 ],
               ),
             ),
