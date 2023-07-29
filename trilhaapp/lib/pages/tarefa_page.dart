@@ -14,6 +14,7 @@ class _TarefaPageState extends State<TarefaPage> {
   var tarefaRepository = TarefaRepository();
   var descricaoController = TextEditingController();
   var _tarefas = const <Tarefa>[];
+  var apenasNaoConcluidos = false;
 
   @override
   void initState() {
@@ -22,7 +23,12 @@ class _TarefaPageState extends State<TarefaPage> {
   }
 
   void obterTarefas() async {
-    _tarefas = await tarefaRepository.listar();
+    if (apenasNaoConcluidos) {
+      _tarefas = await tarefaRepository.listarNaoConcluidas();
+    } else {
+      _tarefas = await tarefaRepository.listar();
+    }
+    setState(() {});
   }
 
   @override
@@ -58,11 +64,54 @@ class _TarefaPageState extends State<TarefaPage> {
                     );
                   });
             }),
-        body: ListView.builder(
-            itemCount: _tarefas.length,
-            itemBuilder: (BuildContext bc, int index) {
-              var tarefa = _tarefas[index];
-              return Text(tarefa.getDescricao());
-            }));
+        body: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Column(
+            children: [
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Apenas não concluídas",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Switch(
+                        value: apenasNaoConcluidos,
+                        onChanged: (bool value) {
+                          apenasNaoConcluidos = value;
+                          obterTarefas();
+                        })
+                  ],
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                    itemCount: _tarefas.length,
+                    itemBuilder: (BuildContext bc, int index) {
+                      var tarefa = _tarefas[index];
+                      return Dismissible(
+                        onDismissed: (DismissDirection dd) async {
+                          await tarefaRepository.revover(tarefa.getId());
+                          obterTarefas();
+                        },
+                        key: Key(tarefa.getId()),
+                        child: ListTile(
+                          title: Text(tarefa.getDescricao()),
+                          trailing: Switch(
+                              value: tarefa.getConcluido(),
+                              onChanged: (bool value) async {
+                                await tarefaRepository.alterar(
+                                    tarefa.getId(), value);
+                                obterTarefas();
+                              }),
+                        ),
+                      );
+                    }),
+              ),
+            ],
+          ),
+        ));
   }
 }
