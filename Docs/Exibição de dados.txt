@@ -1,0 +1,12 @@
+Qual a diferença entre CircularProgressIndicator e LinearPrograssIndicator?
+	Ambos exigem uma informação de carregamento, só que CircularProgressIndicator é uma forma circular e LinearPrograssIndicator e uma forma de linha horizontal.
+
+O que são assets?
+	São imagens, fontes e outros arquivos que são embutidos no nosso app e podemos fazer uso sem a necessidade da internet.
+	
+ShowModalBottonSheet é usado para...?
+	Exibir um modal que ocupa parte da tela, onde podemos por vários widgets.
+	
+Para que serve o ShowAlertDialog?
+	O ShowAlertDialog é usado para mostrar informações ao usuário, com possibilidade de colocar botões de confirmação;
+
