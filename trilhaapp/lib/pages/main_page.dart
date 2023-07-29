@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trilhaapp/pages/card_page.dart';
+import 'package:trilhaapp/pages/tarefa_page.dart';
 import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
 import 'image_assets_page.dart';
@@ -39,6 +40,7 @@ class _MainPageState extends State<MainPage> {
                   ImageAssetsPage(),
                   ListViewVPage(),
                   ListViewHPage(),
+                  TarefaPage(),
                 ],
               ),
             ),
@@ -55,7 +57,9 @@ class _MainPageState extends State<MainPage> {
                   BottomNavigationBarItem(
                       label: "Pag3", icon: Icon(Icons.person)),
                   BottomNavigationBarItem(
-                      label: "Pag4", icon: Icon(Icons.list)),
+                      label: "Pag4", icon: Icon(Icons.image)),
+                  BottomNavigationBarItem(
+                      label: "Tarefa", icon: Icon(Icons.task)),
                 ])
           ],
         ),
