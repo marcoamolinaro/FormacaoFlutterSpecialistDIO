@@ -14,3 +14,8 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+### Adicionar os pacotes em pubspec.yaml
+  cupertino_icons: ^1.0.2
+  google_fonts: ^5.1.0
+  shared_preferences: ^2.2.0
