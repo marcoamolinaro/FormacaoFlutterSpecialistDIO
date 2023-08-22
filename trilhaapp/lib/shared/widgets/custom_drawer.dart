@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trilhaapp/pages/configuracoes_page.dart';
 import 'package:trilhaapp/pages/login_page.dart';
 import 'package:trilhaapp/pages/numeros_aleatorios_page.dart';
 
@@ -99,7 +100,13 @@ class CustomDrawer extends StatelessWidget {
             height: 10,
           ),
           InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (bc) => const ConfiguracoesPage()));
+              },
               child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 5),
                   width: double.infinity,
