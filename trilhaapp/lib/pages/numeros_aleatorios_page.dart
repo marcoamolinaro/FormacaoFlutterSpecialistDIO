@@ -15,8 +15,8 @@ class _NumerosAleatoriosPageState extends State<NumerosAleatoriosPage> {
   int? quantidadeCliques = 0;
   late SharedPreferences storage;
 
-  final CHAVE_NUEMERO_ALEATORIO = "numero_aleatorio";
-  final CHAVE_QUANTIDADE_CLIQUES = "quantidade_cliques";
+  final CHAVE_NUEMERO_ALEATORIO = "CHAVE_NUEMERO_ALEATORIO";
+  final CHAVE_QUANTIDADE_CLIQUES = "CHAVE_QUANTIDADE_CLIQUES";
 
   @override
   void initState() {
