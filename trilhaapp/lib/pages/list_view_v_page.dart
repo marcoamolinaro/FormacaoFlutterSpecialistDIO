@@ -24,9 +24,7 @@ class _ListViewVPageState extends State<ListViewVPage> {
             ],
           ),
           trailing: PopupMenuButton<String>(
-            onSelected: (menu) {
-              print(menu);
-            },
+            onSelected: (menu) {},
             itemBuilder: (BuildContext bc) {
               return <PopupMenuEntry<String>>[
                 const PopupMenuItem<String>(
