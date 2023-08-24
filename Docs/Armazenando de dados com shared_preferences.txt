@@ -1,0 +1,11 @@
+Quais funções usamos para ler e escrever dados String no shared_preferences?
+	Para escrever usamos setString e para ler getString
+
+O shared_preferences funciona em quais plataformas?
+	O shared_preferences funciona nas seguintes plataformas: Android, IOS, Linux, macOS, Web e Windows
+
+Qual forma o shared_preferences armazena os dados?
+	Os dados são amazenados de forma chave-valor
+
+Quais os tipos de dados suportados pelo shared_preferences?
+	Os tipos de dados são inteiro, String, bool, StringList e Double.
