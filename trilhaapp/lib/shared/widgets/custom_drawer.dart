@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:trilhaapp/pages/login_page.dart';
 
 import '../../pages/configuracoes/configuracoes_hive_page.dart';
-import '../../pages/dados_cadastrais_page.dart';
+import '../../pages/dados_cadastrais/dados_cadastrais_hive_page.dart';
 import '../../pages/numero_aleatorios/numeros_aleatorios_hive_page.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -57,7 +57,7 @@ class CustomDrawer extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const DadosCadastraisPage()));
+                        builder: (context) => const DadosCadastraisHivePage()));
               },
               child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 5),

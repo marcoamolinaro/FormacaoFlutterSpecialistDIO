@@ -16,6 +16,16 @@ For help getting started with Flutter development, view the
 samples, guidance on mobile development, and a full API reference.
 
 ### Adicionar os pacotes em pubspec.yaml
+# Em dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^5.1.0
   shared_preferences: ^2.2.0
+  hive: ^2.2.3
+  path_provider: ^2.1.0
+
+# Em dev_dependencies:
+hive_generator: ^2.0.1
+build_runner: ^2.4.6
+
+# Após adicionar as dev_depenencies rodar no terminal
+flutter pub run build_runner build
