@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:trilhaapp/pages/card_page.dart';
-import 'package:trilhaapp/pages/tarefa_page/tarefa_hive_page.dart';
+import 'package:trilhaapp/pages/tarefa_page/tarefa_sqlite_page.dart';
 import 'package:trilhaapp/shared/widgets/custom_drawer.dart';
 
 import 'image_assets_page.dart';
@@ -40,7 +40,7 @@ class _MainPageState extends State<MainPage> {
                   ImageAssetsPage(),
                   ListViewVPage(),
                   ListViewHPage(),
-                  TarefaPage(),
+                  TarefaSqlitePage(),
                 ],
               ),
             ),
