@@ -24,11 +24,7 @@ class _TarefaPageState extends State<TarefaPage> {
 
   void obterTarefas() async {
     tarefaRepository = await TarefaHiveRepository.carregar();
-    //if (apenasNaoConcluidos) {
-    //  _tarefas = await tarefaRepository.listarNaoConcluidas();
-    //} else {
-      _tarefas = tarefaRepository.obterDados();
-    //}
+    _tarefas = tarefaRepository.obterDados(apenasNaoConcluidos);
     setState(() {});
   }
 
@@ -56,9 +52,11 @@ class _TarefaPageState extends State<TarefaPage> {
                         TextButton(
                             onPressed: () async {
                               await tarefaRepository.salvar(
-                                  TarefaHiveModel.criar(descricaoController.text, false));
+                                  TarefaHiveModel.criar(
+                                      descricaoController.text, false));
                               // ignore: use_build_context_synchronously
                               Navigator.pop(context);
+                              obterTarefas();
                               setState(() {});
                             },
                             child: const Text("Salvar")),
@@ -95,17 +93,17 @@ class _TarefaPageState extends State<TarefaPage> {
                       var tarefa = _tarefas[index];
                       return Dismissible(
                         onDismissed: (DismissDirection dd) async {
-                          //await tarefaRepository.revover(tarefa.id);
+                          tarefaRepository.excluir(tarefa);
                           obterTarefas();
                         },
-                        key: Key(tarefa.key),
+                        key: Key(tarefa.key.toString()),
                         child: ListTile(
                           title: Text(tarefa.descricao),
                           trailing: Switch(
                               value: tarefa.concluido,
                               onChanged: (bool value) async {
-                                //await tarefaRepository.alterar(
-                                //    tarefa.id, value);
+                                tarefa.concluido = value;
+                                tarefaRepository.alterar(tarefa);
                                 obterTarefas();
                               }),
                         ),

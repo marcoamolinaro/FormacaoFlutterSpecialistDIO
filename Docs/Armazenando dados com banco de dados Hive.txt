@@ -1,0 +1,12 @@
+De qual forma o Hive armazena os dados?
+	Os dados são armazenados de forma chave-valor
+	
+Quais funções usamos para escrever dados String no Hive?
+	Para escrever dados podemos usar o Put e o Add
+	
+O Hive funciona em quais plataformas?
+	O Hive funciona nas seguintes plataformas: Android, iOS, Linux, MacOS, Web e Windows
+	
+Para que é usado os Adapter no Hive?
+	Os Adapters são usados para facilitar o tratamento de dados e possibilitar uso de mais funções
+	
