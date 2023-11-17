@@ -16,10 +16,6 @@
 
 😊 O curso é focado em desenvolver um App de IMC.
 
-## Prazo
-
-⚡ Este projeto foi finalizado no dia 13/04/2023.
-
 ## Imagens
 
 <p float="left" align="center">
